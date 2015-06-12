@@ -1,6 +1,6 @@
 <?php
 
-namespace branchonline\lightbox;
+namespace globaloxs\lightbox;
 
 use yii\base\Widget;
 use yii\helpers\Html;
