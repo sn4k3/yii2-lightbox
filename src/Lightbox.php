@@ -19,9 +19,10 @@ class Lightbox extends Widget {
             if(!isset($file['thumb']) || !isset($file['original'])) {
                 continue;
             }
-			$linkOptions=isset($file['linkOptions'])?$file['linkOptions']:[];
+	    $linkOptions=isset($file['linkOptions'])?$file['linkOptions']:[];
+            $thumbOptions=isset($file['thumbOptions'])?$file['thumbOptions']:[];
 
-            $img = Html::img($file['thumb']);
+            $img = Html::img($file['thumb'], $thumbOptions);
             $a = Html::a($img, $file['original'], array_merge([
                 'data-lightbox' => 'image-' . uniqid(),
                 'data-title' => isset($file['title']) ? $file['title'] : '',
